@@ -1,0 +1,100 @@
+-- DEFINIÇÃO --
+
+  Serviço de armazenamento de objetos no Google Cloud. Os objetos são armazenados em contêineres 
+chamados de buckets que estão associados a um projeto. Cada projeto, bucket e objeto no Google Cloud 
+é um recurso do Google Cloud, assim como as instâncias do Compute Engine.
+  Depois de criar um projeto, é possível criar buckets do Cloud Storage e usá-los para fazer upload e 
+download de objetos. Também é possível conceder permissões para tornar seus dados acessíveis aos 
+participantes especificados por você ou, em determinados casos de uso, como na hospedagem de um site, 
+torná-los acessíveis a todos que usam a Internet pública.
+
+-- FERRAMENTAS BÁSICAS --
+
+1. Console: fornece uma interface visual para você gerenciar seus dados em um navegador.
+
+2. Google Cloud CLI: permite a interação com o Cloud Storage por meio de um terminal usando comandos gcloud 
+storage.
+
+3. Bibliotecas de cliente: torna possível gerenciar os dados usando sua linguagem favorita (exemplo C++, 
+C#, Go, Java, Node.js, PHP, Python e Ruby)
+
+4. APIs REST: permite gerencier seus dados usando a API JSON ou a API XML.
+
+
+-- RECURSOS PRESENTES NA CLOUD STORAGE --
+
+1. Replicação turbo: oferece um Objetivo de Ponto de Replicação (RPO) de 15 minutos para clientes usando o 
+armazenamento birregional. 
+
+2. Gerenciamento do ciclo de vida de objetos: define condições que acionam a exclusão de dados ou a 
+transição para uma classe de armazenamento mais econômica.
+
+3. Controle de versões de objetos: possibilidade de continuar a armazenar cópias antigas de objetos quando 
+elas forem excluídas ou substituídas.
+
+4. Políticas de retenção: definir períodos de armazenamento mínimos para que objetos não sejam excluídos 
+antes disso.
+
+5. Proteção de objetos: proteção a um objeto para evitar que ele seja excluído.
+
+6. Chaves de criptografia gerenciadas pelo cliente:	criptografia de dados com chaves de criptografia 
+armazenadas pelo Cloud Key Management Service e gerenciadas pelo usuário.
+
+7. Chaves de criptografia fornecidas pelo cliente: criptografia de dados com chaves de criptografia 
+criadas e gerenciadas pelo usuário.
+
+8. Acesso uniforme no bucket: controle de maneira uniforme o acesso aos seus recursos do Cloud Storage 
+desativando ACLs de objetos.
+
+9. Pagamentos do solicitante: os usuários que acessam seus dados incluam um ID de projeto para faturar as 
+cobranças de rede e operações, e as tarifas de recuperação.
+
+10. Bloqueio de buckets: permite configurar uma política de retenção de dados para um bucket do Cloud 
+Storage que determina quanto tempo os objetos devem ser mantidos no bucket.
+
+11. Notificações do Pub/Sub para o Cloud Storage: envio de notificações para o Pub/Sub quando objetos 
+forem criados, atualizados ou excluídos.
+
+12. Registros de auditoria do Cloud com o Cloud Storage: manter registros de atividades administrativas 
+e de acesso a dados para seus recursos do Cloud Storage.
+
+13. Permissões de acesso a objetos e buckets: o Cloud Identity and Access Management (IAM) permite que o usuário 
+controle quem tem acesso aos seus buckets e objetos.
+
+
+-- TUTORIAIS --
+
+1. Conhecendo o console do Storage (https://cloud.google.com/storage/docs/discover-object-storage-console)
+  
+  Envolve o uso do Cloud Storage e do Cloud Load Balancing.
+  
+  Etapas:
+
+    Primeiramente cria um projeto;
+
+    Criando o bucket:
+      Definir nome;
+      Escolher o local do armazenamento;
+      Escolher classe de armazenamento (standart: por curto prazo e para ser acessado com frequência; 
+     nearline:  backups e dados acessados 1 vez no mês; coldline: para recuperação de desastres e 
+     dados acessados menos do que uma vez por trimestre; archive: para preservação digital e duradoura 
+     de dados acessados menos de uma vez ao ano);
+      Escolher o controle de acesso (uniforme:  permissões no nível do bucket-IAM; detalhado: usa permissões 
+     no nível do objeto-ACLs, além das permissões IAM);
+      Escolher tipo de proteção dos dados (nenhum; controle de versão a objeto: melhor para recuperação 
+     dos itens; política de retenção: melhor para conformidade);
+    
+    Fazendo o upload de objetos para o bucket:
+      Na página de detalhes do bucket, fazer upload de arquivos;
+    
+    Movendo arquivos no bucket:
+      Na página de detalhes do bucket, cria-se uma pasta;
+      Acesso ao menu flutuante, e clica na opção mover, e escolhe o caminho desejável;
+
+    Compartilhando o Objeto:
+      Na página de detalhes do bucket, acessar a aba permissões;
+      Clicar em Permitir Acesso, adicionar em novos principais o allUsers e em selecionar papel a opção
+     Cloud Storage > Leitor de objetos do Storage.
+      Na caixa de diálogo exibida, clicar em Permitir acesso público.
+
+2. Hospedando websites estáticosb(https://cloud.google.com/storage/docs/hosting-static-website)
