@@ -20,6 +20,24 @@ C#, Go, Java, Node.js, PHP, Python e Ruby)
 
 4. APIs REST: permite gerencier seus dados usando a API JSON ou a API XML.
 
+-- PROTEÇÃO DE DADOS NA CLOUD STORAGE --
+
+1. Gerenciamento de identidade e acesso: uso do IAM para controlar quem tem acesso aos recursos do projeto 
+no Google Cloud. Incluem buckets e objetos no Cloud Storage e outras entidades no Google Cloud, como 
+instâncias do Compute Engine. Exemplo de tipo de acesso a buckets e objetos (como update, create ou delete)
+
+2. Criptografia de dados: uso a criptografia no servidor para criptografar seus dados. Também é possível 
+usar opções complementares de criptografia de dados, como chaves de criptografia gerenciadas pelo cliente 
+e chaves de criptografia fornecidas pelo cliente.
+
+3. Autenticação: verificar se as pessoas que acessam seus dados têm as credenciais apropriadas.
+
+4. Bloqueio de buckets: determinar por quanto tempo os objetos nos buckets precisam permanecer retidos 
+especificando uma política de retenção.
+
+5. Controle de versão de objeto: quando a versão ativa de um objeto é substituída ou excluída, 
+ela pode ser retida como uma versão não atual se você ativar o controle de versão de objeto.
+
 
 -- RECURSOS PRESENTES NA CLOUD STORAGE --
 

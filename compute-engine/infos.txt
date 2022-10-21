@@ -1,0 +1,139 @@
+-- DEFINIÇÃO --
+
+  Serviço de computação e hospedagem que permite criar e executar máquinas virtuais na infraestrutura 
+do Google. Envolve os recursos de escalonamento, desempenho e valor do Compute Engine para iniciar com 
+facilidade grandes clusters de computação na infraestrutura do Google. Sem nenhum investimento inicial, 
+execute milhares de CPUs virtuais em um sistema de desempenho rápido e consistente.
+
+-- MÁQUINAS VIRTUAIS --
+
+1. Cargas de trabalho de escalonamento horizontal (T2D): melhor custo-benefício comparadas com as VMs 
+de uso geral de qualquer um dos principais fornecedores de nuvem pública. Primeiro tipo de instância da 
+família de VMs Tau e vêm em formas predefinidas, com até 60 vCPUs por VM e 4 GB de memória por vCPU. 
+Exemplos de uso: trabalho de escalonamento horizontal, como servidores da Web, microsserviços 
+conteinerizados, transcodificação de mídia e aplicativos Java de grande escala.
+
+2. Cargas de trabalho de uso geral (E2, N2, N2D e N1): máquinas de uso geral com um bom equilíbrio entre 
+preço e desempenho. Adequadas para uma ampla variedade de cargas de trabalho comuns, incluindo bancos de dados, 
+ambientes de desenvolvimento e de testes, aplicativos da Web e jogos para dispositivos móveis. Elas 
+oferecem suporte para até 224 vCPUs e 896 GB de memória.
+
+3. Memória ultra-alta (M2, M1): possibilitam as maiores configurações de memória, com até 12 TB para uma 
+única instância. Perfeitas para cargas de trabalho com uso intensivo de memória, como bancos de dados grandes, 
+como SAP HANA, e cargas de trabalho de análise de dados na memória.
+
+4.Cargas de trabalho de computação intensiva (C2, C2D): oferecem o melhor desempenho por núcleo no Compute 
+Engine. Otimizadas para cargas de trabalho como computação de alto desempenho (HPC), servidores de jogos e 
+disponibilização de API sensível à latência.
+
+5. Aplicativos e cargas de trabalho mais exigentes (A2): baseadas na GPU NVIDIA Ampere A100 Tensor Core. 
+Cada GPU A100 oferece um desempenho de computação até 20 vezes maior que o das GPUs da geração anterior. 
+Estas VMs foram desenvolvidas para suas cargas de trabalho mais exigentes, como machine learning e 
+computação de alto desempenho.
+
+
+-- RECURSOS PRESENTES NA CLOUD STORAGE --
+
+1. VM Manager: conjunto de ferramentas usadas para gerenciar sistemas operacionais para grandes frotas de 
+máquinas virtuais (VMs) que executam o Windows e o Linux no Compute Engine.
+
+2. VMs confidenciais: permite a criptografia de dados em uso enquanto eles são processados e que não compromete 
+o desempenho. 
+
+3. Migração em tempo real para VMs: As VMs podem ser migradas em tempo real entre sistemas host sem necessidade 
+de reinicialização, o que mantém os aplicativos em execução mesmo durante manutenções.
+
+4. Nós de locatário individual:	Os nós de locatário individual são servidores físicos do Compute Engine, 
+dedicados exclusivamente a seu uso. Simplificam a implantação de aplicativos com licenças adquiridas pelo 
+usuário (BYOL). Dão acesso aos mesmos tipos de máquinas e opções de configuração de VMs que as instâncias 
+de computação comuns.
+
+5. Tipos de máquinas personalizados: possibilidade de criar uma VM com um tipo de máquina que se adapte melhor 
+às cargas de trabalho. Garante uma economia significativa ao adequar um tipo de máquina personalizado às 
+necessidades.
+
+6. Tipos de máquinas predefinidos: oferece configurações predefinidas de máquinas virtuais para todas 
+as necessidades (de instâncias pequenas de uso geral até instâncias grandes com otimização de memória 
+com até 11,5 TB de RAM ou instâncias rápidas com otimização para computação com até 60 vCPUs).
+
+7. VMs spot: instâncias com preços acessíveis, adequadas para jobs em lote e cargas de trabalho tolerantes 
+a falhas. Oferecem economia significativa de até 91%, enquanto ainda mantém o mesmo desempenho e recursos 
+que as VMs regulares.
+
+8. Grupos de instâncias: conjunto de máquinas virtuais que executam um único aplicativo. Ele cria e exclui 
+máquinas virtuais automaticamente para atender à demanda, além de corrigir falhas da carga de trabalho e 
+executar atualizações.
+
+9. Discos permanentes: armazenamento em blocos durável e de alto desempenho para instâncias de VMs. Criação de 
+discos permanentes nos formatos HDD ou SSD, tirar snapshots e criar novos discos permanentes com eles. Se uma 
+instância de VM é encerrada, o disco permanente dela retém os dados e pode ser anexado a outra instância.
+
+10. SSD local: oferece armazenamento em blocos local com unidades de estado sólido (SSD), sempre criptografado. 
+Os SSDs locais estão fisicamente conectados ao servidor que hospeda a instância da máquina virtual para 
+operações de entrada/saída por segundo (IOPS) muito altas e latência muito baixa em comparação com os discos 
+permanentes.
+
+11. Aceleração com GPUs: possibilidade de adicionar GPUs para acelerar cargas de trabalho de computação 
+intensa, como aplicativos de estação de trabalho virtual, simulação e machine learning. Adicionar ou remover
+GPUs de uma VM quando a carga de trabalho mudar e pague apenas pelos recursos que você usar. 
+
+12. Balanceamento de carga global: ajuda a distribuir solicitações recebidas em todos os pools de instâncias 
+em várias regiões. Alcançando os níveis máximos de desempenho, capacidade de processamento e disponibilidade 
+com baixo custo.
+
+13. Suporte a Linux e Windows:	usar o SO de sua escolha (CentOS, CoreOS, SUSE, Ubuntu, Red Hat Enterprise 
+Linux, FreeBSD ou Windows Server 2008 R2, 2012 R2 e 2016). Também pode usar uma imagem compartilhada 
+da comunidade do Google Cloud ou uma própria.
+
+14. Faturamento por segundo: furamento feito em incrementos por segundo. Paga somente pelo tempo de computação 
+que usar.
+
+15. Economia com compromissos:	possibilidade de economizar até 57% sem custos iniciais nem restrições 
+de tipo de instância.
+
+16. Suporte a contêineres: execute, gerencie e orquestre contêineres do Docker nas VMs do Compute Engine 
+com o Google Kubernetes Engine.
+
+17. Reservas: possibilidade de criar reservas para instâncias de VMs em uma zona específica, para garantir 
+que o projeto tenha recursos em caso de aumentos futuros na demanda. 
+
+18. Recomendações de dimensionamento adequado: há recomendações de tipos de máquinas para ajudar a otimizar 
+a utilização de recursos das instâncias de máquinas virtuais (VM).
+
+19. Gerenciamento de correções do SO: possibilitam aplicar os patches do SO a um conjunto de VMs, receber 
+dados em compliance com os patches em todos os ambientes e automatizar a instalação dos patches do SO 
+nas VMs, tudo isso em um local centralizado. 
+
+20. Política de posicionamento: para especificar a localização das instâncias de hardware. Proporciona 
+maior confiabilidade ao colocar as instâncias em hardwares distintos, reduzindo o impacto das falhas 
+de hardware. Proporciona menor latência entre os nós, aproximando as instâncias dentro da mesma infraestrutura 
+de rede. 
+
+-- TUTORIAIS --
+
+1. Criar instância Linux (https://cloud.google.com/compute/docs/create-linux-vm-instance):
+
+  Etapas:
+
+    No painel principal, acessar Compute Engine > instância de VM
+
+    Criar a VM:
+      Digitar o nome;
+      Selecionar Região;
+      Configurações da máquina (tipo de vm);
+      Possibilidade de ativar Serviço de VM confidencial (serviço adiciona proteção aos dados em uso ao 
+       manter a memória dessa VM criptografada);
+      Possibilidade de adicionar um contêiner;
+      Opção de alterar disco de inicialização (imagens públicas, imagens personalizadas, instantâneas, 
+       snapshots de arquivos ou discos atuais);
+      Identidade e acesso à API (conta de serviço que você quer usar e o nível de acesso permitido da API);
+      Firewall (HTTP/HTTPS);
+    
+    Conectar VM:
+      Na tela principal dde listagem de VM's, mude a opção de conectar para SSH e clique;
+
+2. Configurando um serviço web básico (https://cloud.google.com/compute/docs/tutorials/basic-webserver-apache?hl=pt-BR)
+
+
+
+
